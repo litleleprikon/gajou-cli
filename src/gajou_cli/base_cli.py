@@ -60,7 +60,7 @@ def _parse_command(command):
     for char in command:
         if char == '"':
             is_quoted = not is_quoted
-        if char in [' ', '='] and not is_quoted:
+        if char in [' '] and not is_quoted:
             commands.append(''.join(chars))
             chars = []
         else:
