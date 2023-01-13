@@ -54,7 +54,7 @@ def _parse_command(command):
     chars = []
     is_quoted = False
 
-    if not command:
+    if command is None:  # empty string is valid value
         return commands
 
     for char in command:
